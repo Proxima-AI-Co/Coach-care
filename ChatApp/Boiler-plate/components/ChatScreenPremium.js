@@ -129,7 +129,7 @@ export default function ChatScreenPremium({route,navigation}) {
         backgroundColor={backgroundStyle.backgroundColor2}
     />
       <View style={styles.header}>
-        <Text style={styles.coachCareText}>Coach Care</Text>
+        <Text style={styles.coachCareText}>{name}</Text>
         <TouchableOpacity style={styles.upgradeButton}>
             <Text style={styles.upgradeButtonText}>Upgrade</Text>
         </TouchableOpacity>
