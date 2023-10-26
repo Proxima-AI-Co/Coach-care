@@ -71,7 +71,7 @@ def check_user():
     coach = request.json['coach']
 
     print("asd")
-    path = str(os.getcwd())+'//'+ids+'_'+coach+'.json'
+    path = str(os.getcwd())+'//chats//'+ids+'_'+coach+'.json'
     # path = str(os.getcwd())+'\\'+"5467484.json"
     print(path)
     isexist = os.path.exists(path)
@@ -113,7 +113,7 @@ def check_user():
 def get_chatss():
     ids = request.json['user_id']
     coach = request.json['coach']
-    path = str(os.getcwd())+'//'+ids+"_"+coach+'.json'
+    path = str(os.getcwd())+'//chats//'+ids+"_"+coach+'.json'
     return jsonpickle.encode(get_chats(path))
 
 ######################################################### clear chats
@@ -123,7 +123,7 @@ def clear_chatss():
     # return jsonpickle.encode(get
     # _chats(ids))
     try:
-        path =os.remove(str(os.getcwd())+'\\'+ids+'.json')
+        path =os.remove(str(os.getcwd())+'//chats//'+ids+'.json')
         return {"status":"OK","message":"success"}
     except :
         return { "status":"error","message":"Something went wrong,chat doesn't exist" }
