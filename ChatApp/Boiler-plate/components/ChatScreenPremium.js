@@ -71,7 +71,13 @@ export default function ChatScreenPremium({route,navigation}) {
                     user_id: "xyz",
                     prompt: inputText,
                     coach:name,
-                    system:`you are ${name} act like  ${name} your task is to motivate people making  ${name} a inspiration keep your answer small`
+                    system:`you are ${name} act like  ${name} your task is to motivate people making  ${name} a inspiration keep your answer small you are integrated to mobile app of Coach Care. which is a platform for Motivation and Coaching. their Mantra is 
+
+
+                I can, I will, Watch me
+                We can, we will, watch us
+
+                Need to give a closing statement with the mantra after very question`
                 }),
             }).then(res => res.json()).then(data => {
                 const botResponse = {
